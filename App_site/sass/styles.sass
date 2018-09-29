@@ -1,0 +1,776 @@
+
+@import reset  
+    
+    
+    
+    
+    
+    
+//colors
+$Primary-gradient: linear-gradient(145deg, rgba(202, 107, 232, 0.9803921568627451), rgba(48, 35, 174, 0.9490196078431372))
+$white: #ffffff
+$primary-color: #898989
+$purple: #904fc9
+$light-blue: #5cc3f2
+$light-green: #2bd55d
+$light-pink: #ce81f0
+$light-orange: #ff6a30
+$light-bg: #f6f9fd
+$dark-font: #293039
+$light-font: #7d878f
+
+//fonts
+$Primary-font: 'Montserrat'
+
+
+*
+    box-sizing: border-box
+
+
+html, body
+    margin: 0
+    padding: 0
+    font-weight: semi-bold
+    font-family: $Primary-font , Helvetica, sans-serif
+    box-sizing: border-box
+a
+    cursor: pointer
+    text-decoration: none
+ul
+    list-style-type: none
+h2, h3, h4
+    color: $dark-font
+h3
+    font-size: 1.7em
+h4
+    font-size: 1.4em
+p
+    font-size: 1em
+    color: $light-font
+section
+    padding: 100px 0
+footer
+    padding-top: 100px
+input
+    float: left
+    padding: 10px
+    width: 71%
+    border: none
+    border-radius: 999px
+    &:focus
+    outline: none
+hr
+    border-color: rgba(224, 224, 224, 0.27)
+    margin: 0
+.clearfix::after 
+    content: ""
+    clear: both
+    display: table
+.col-1, .col-2, .col-3, .col-4
+    width: 50%
+    display: inline-block
+    float: left
+.col-1
+    padding-right: 70px
+.titles
+    text-align: center
+    h3
+        color: $dark-font
+.container
+    max-width: 1140px
+    margin: 0 auto
+.pull-right
+    float: right
+.pull-left
+    float: left
+.align-right
+    text-align: right
+
+//Buttons
+.default-btn
+    padding: 15px
+    background: transparent
+    border-radius: 999em
+    border: 2px solid $white
+    color: $white
+    font-weight: bold
+    -webkit-transition: all .4s ease-out
+    -moz-transition: all .4s ease-out
+    -o-transition: all .4s ease-out
+    transition: all .4s ease-in-out
+    display: inline-block
+    width: 160px
+    text-align: center
+    &:hover
+        background: $white
+        border: 2px solid $white
+        color: $purple      
+.dark:hover
+    background-color: $purple
+    color: $white
+    border: 2px solid $purple
+    
+.dark
+    -webkit-transition: all 1s ease-out
+    -moz-transition: all 1s ease-out
+    -o-transition: all 1s ease-out
+    transition: all 1s ease-out
+    border: 2px solid $purple
+    color: $purple 
+.subscribe-bar
+    position: relative
+    padding: 0
+    border: 1px solid #e0e0e0
+    border-radius: 999px
+    margin: 0 auto
+    width: 450px
+    .subscribe-btn
+        padding: 9px
+        position: absolute
+        right: -1px
+        top: -1px
+        background: $purple
+        color: $white
+        border: 2px solid $purple
+        &:hover
+            background: $purple
+            border-color: $purple
+/*------------- Nav ------------------*/
+.menu
+    cursor: pointer
+    display: none
+    position: absolute
+    z-index: 200
+    right: 0
+    .bar-icon, .bar-icon-close
+        color: $white
+
+
+.banner
+    position: relative
+    margin: 0 0 10% 0
+    padding: 0
+    background-image: url('../images/bg_pattern.jpg') 
+    .overlay
+        background: $Primary-gradient
+    .wrapper
+        position: relative
+        max-width: 90%
+        width: 1140px
+        color: $white
+        margin: 0 auto
+        h1
+            padding-top: 100px
+            font-size: 3.5em
+            margin: 50px 0 0 0
+        img
+            position: absolute
+            top: -25px
+            right: 0
+            max-width: 280px
+        .default-btn
+            margin: 50px 0
+    .logo
+        z-index: 200
+        position: absolute
+        a
+            padding: 10px
+            color: $white
+            display: inline-block
+        
+        &:hover
+                color: $purple            
+nav
+    background: transparent
+    max-width: 100%
+    margin: 0
+    ul
+        text-align: right
+        margin: 0
+        padding-right: 3em
+        list-style-type: none
+        li
+            line-height: 2em
+            padding: .5em
+            display: inline-block
+            a:hover
+                color: $purple
+            a
+                font-size: 1.2em
+                color: $white
+
+/*------------- info ------------------*/
+.app-advantages      
+    .col
+        float: left
+        background-color: light-grey
+        width: 25%
+        padding: 2px           
+        .col-inner
+            margin: 0 auto
+            text-align: center
+            margin-top: 12px
+            h3
+                color: $dark-font
+                font-size: 1.2em
+            p
+                color: $light-font
+                font-size: .8em
+            .key-feature
+                width: 80px
+                height: 80px
+                display: block
+                margin: 0 auto
+                border-radius: 50%
+            .icon1, .icon2, .icon3, .icon4
+                position: relative
+            .icon1
+                background-color: $light-blue
+            .icon2
+                background-color: $light-green
+            .icon3
+                background-color: $light-pink
+            .icon4
+                background-color: $light-orange
+            .icon-inner
+                color: white
+                position: absolute
+            .icon-shipping
+                top: 24px
+                left: 20px
+            .icon-cog
+                top: 16px
+                left: 16px
+            .icon-hourglass
+                top: 16px
+                left: 23px
+            .icon-cloud
+                top: 14px
+                left: 11px
+/*------------- features ------------------*/
+.feature
+    .col-1
+        width: 50%
+        margin: 0 auto
+        .left
+            left: -160px
+        .right
+            right: -160px
+        .right-img
+            margin-left: 70px
+            margin-right: 0        
+    img
+        max-width: 400px
+        max-height: 690px
+        box-shadow: -4px 20px 20px 3px lightgrey
+        display: block
+        margin: 0 auto
+    .col-2
+        display: table-cell
+        width: 50%
+        .col-wrapper
+            padding: 0
+            margin: 0 auto
+            width: 90%
+
+    .feature-icon
+        color: $purple  
+/*------------- How it Works ------------------*/
+.works
+    background: $Primary-gradient
+    .how-it-works
+        padding: 2%
+        h3, p
+            color: $white
+        video
+            width: 100%
+            max-width: 80%
+            display: block
+            margin:  auto
+        .get-app
+            margin: 20px
+            position: relative
+            h3
+                margin: 0
+        .get-app-card
+            padding-left: 8%
+            max-width: 50%
+            width: 100%
+
+    .apple-store
+        width: 175px
+    .google-play
+        width: 191px
+/*------------- Price-Plans ------------------*/      
+.pricing-plans
+    position: relative
+    .info-card
+        width: 40%
+    ul
+        position: absolute
+        top: 0
+        right: 0
+        width: 60%
+        li
+            padding: 2em
+            background: $white
+            text-align: center
+            display: inline-block
+            width: 40%
+            float: left
+            margin: 1.5em
+            box-shadow: -1px 5px 16px 0px lightgrey
+            height: 100%
+            max-height: 530px
+            p
+                font-size: .9em
+            span
+                color: $light-font                                
+            h3
+                span
+                    font-weight: normal
+                    padding-left: 5px
+                    font-size: .6em
+            a
+                margin: 1.5em
+/*------------- Compatibility ------------------*/
+.track-progress
+    padding-top: 300px
+    background: $light-bg
+    .col-1, .col-2
+        width: 50%
+        display: inline-block
+    .col-1
+        float: left
+        img
+            width: 100%
+            padding-right: 70px
+    .col-2
+        float: left
+/*------------- Download app ------------------*/
+.download-app
+    background: $Primary-gradient
+    h3
+        color: $white
+        margin: 0
+    img
+/*------------- Blog ------------------*/
+.blog
+    background: $light-bg
+    .post-col
+        box-shadow: -1px 5px 16px 0px lightgrey
+        width: 30%
+        margin: 1.5%
+        background: $white
+        padding: 0
+        float: left
+        .thin-wrapper
+            padding: 0 8%
+    .post-img
+        width: 100%
+    .by, .date
+        color: #e0e0e0
+    .post-content
+        p
+            font-size: .9em    
+
+/*------------- footer ------------------*/
+footer
+    .col-1, .col-2, .col-3
+        width: 31.5%
+    .col-2
+        text-align: center
+        ul
+            padding: 0
+            li
+                margin: 5px 0
+            a
+                color: $light-font
+                &:hover
+                    border-bottom: 2px solid $purple
+    .col-3
+        .subscribe-bar
+            width: 100%
+        .social-icons
+            position: relative
+            display: inline-block
+            width: 40px
+            height: 40px
+            margin: 10px 0
+            border: 1px solid #e0e0e0 
+            border-radius: 50%
+            &:hover
+                background: #d8dbdc
+                color: $white          
+        .facebook-icon, .twitter-icon, .instagram-icon
+            position: absolute
+            top: 10px 
+        .facebook-icon           
+            left: 12px
+            color: #4a72a9
+        .twitter-icon           
+            left: 9px
+            color: #00b9f1
+        .instagram-icon            
+            left: 10px
+            color: #961318
+    .copyright
+        padding: 4px 0
+        color: #e0e0e0
+        text-align: center
+        a
+            color: $light-font
+            &:hover
+                color: $light-blue
+        
+
+/*------------------- Media Queries --------------------*/
+
+@media only screen and (max-width: 1250px)
+    .col-1, .col-2, .col-3, .col-4
+        padding: 10px
+    section
+        .wrapper          
+            margin-left: 0
+            margin-right: 0
+    .apple-store
+        width: 175px
+    .google-play
+        width: 191px
+    /*------------- Advantages ------------------*/
+    .app-advantages        
+            .col-inner
+                h3
+                    font-size: 1em
+                p
+                    font-size: .8em
+    /*------------- Pricing ------------------*/
+    .pricing-plans
+        padding: 50px 0
+        .info-card
+            text-align: center
+            margin: 0 auto
+        ul
+            position: static
+            width: 100%
+            padding: 0
+            li
+                width: 46%
+                margin: 2%
+                padding: 2%
+    /*------------- Download ------------------*/
+
+
+@media only screen and (max-width: 900px)
+    /*------------- general ------------------*/
+    section
+        padding: 80px 0
+    p
+        font-size: .8em
+    h4
+        font-size: 1.1em
+    .container
+        max-width: 790px
+    .default-btn
+        padding: 10px
+        font-size: 14px
+    /*------------- Nav ------------------*/
+    .banner 
+        .overlay
+            .wrapper
+                padding-left: 30px
+                h1
+                    padding-top: 75px
+                    font-size: 2em
+            .default-btn
+                margin: 25px 0
+            img
+                top: -3%
+                right: 135px
+                width: 25%
+
+    nav      
+        ul
+            padding-right: 10px
+            li
+                padding: .5em
+                a
+                    font-size: 18px
+    /*------------- Advantages ------------------*/
+    .app-advantages
+        .col
+            width: 50%          
+            .col-inner
+                padding: 5%
+                h3
+                    font-size: 1em
+                p
+                    font-size: .8em
+    /*------------- Features ------------------*/
+    .feature
+        .col-1, .col-2
+            img
+                width: 50%
+        .col-1
+            padding: 0
+            .col-wrapper
+                padding-left: 10px
+        .col-2
+            .col-wrapper
+                padding-right: 10px
+    /*------------- Works ------------------*/
+    .works, .download-app
+        .apple-store
+            width: 130px
+        .google-play
+            width: 144px
+    /*------------- Manage ------------------*/
+    .track-progress
+        padding: 100px 0
+        .col-1
+            img
+                padding: 0
+    /*------------- Download ------------------*/
+    .download-app
+        text-align: center
+        .col-1, .col-2
+            width: 100%           
+    /*------------- Blog ------------------*/
+    .blog
+        span
+            font-size: .8em
+    /*------------- Footer ------------------*/
+    footer
+        padding-top: 50px
+        .col-1, .col-2, .col-3
+            text-align: center
+        .col-1, .col-2
+            width: 50%
+        .col-1
+            padding-left: 50px
+            text-align: left
+        .col-3
+            width: 100%
+            .subscribe-bar
+                width: 60%
+
+    
+@media only screen and (max-width: 750px)
+    h3
+        font-size: 1.5em
+    p
+        font-size: .7em
+    section
+        padding: 25px 0
+    input
+        padding: 8px
+        font-size: .7em
+    .container
+        max-width: 720px
+    .default-btn
+        width: 120px
+        font-size: 8px
+    .col-1, .col-2, .col-3, .col-4
+        width: 100%
+        display: block
+    .visible
+        left: 0
+    /*------------- Nav ------------------*/
+    .banner
+        img
+            display: none
+        .menu
+            display: block           
+            float: right
+            padding: 10px
+            .bar-icon
+                position: relative
+            .bar-icon-close
+                display: none
+                position: absolute
+                right: 11px
+                top: 9px
+    nav
+        position: absolute
+        background: $Primary-gradient
+        width: 100%
+        height: 100%
+        z-index: 100
+        left: -733px
+        display: block
+        -webkit-transition: left .5s linear
+        -moz-transition: left .5s linear
+        transition: left .5s linear
+        ul
+            margin: 25px 0
+            text-align: center
+            display: grid
+            padding: 0
+            li
+                line-height: 1.5em
+                a
+                    font-size: 20px
+    /*------------- features ------------------*/
+    .feature
+        .col-1, .col-2
+            display: block
+            width: 50%
+        .col-2
+            margin: 0 auto
+            .col-wrapper
+                padding: 0              
+    /*------------- Subscribe ------------------*/
+    .subscribe-bar
+        width: 60%
+    /*------------- Works ------------------*/
+    .works
+        .video-wrapper
+            video 
+                max-width: 100%
+                margin: 0 auto
+        .get-app
+            margin: 0
+            .col-1
+                max-width: 100%
+                padding: 0
+            .col-2
+                text-align: center
+    .apple-store
+        width: 100px
+    .google-play
+        width: 110px
+    /*------------- Pricing ------------------*/
+    .pricing-plans
+        .info-card
+            width: 100%
+        ul
+            li
+                h3
+                    font-size: 1em
+                span
+                    font-size: .7em
+                p
+                    font-size: .6em
+                a
+                    margin: 2px
+    /*------------- Manage ------------------*/
+    .track-progress
+        .col-1, .col-2
+            width: 100%
+    /*------------- Blog ------------------*/
+    .blog
+        .post-col
+            width: 47%
+        .post-title
+            font-size: .7em
+            margin: 2px 0
+        .by, .date, .post-content
+            font-size: .5em
+    /*------------- Footer ------------------*/
+    footer
+        .col-1, .col-2
+            width: 100%
+        .copyright
+            font-size: .6em
+
+
+@media only screen and (max-width: 400px)
+    h3
+        font-size: .8em
+    p
+        font-size: .5em
+    .titles
+        padding: 10px
+    .subscribe-bar
+        width: 100%
+    .col-1, .col-2, .col-3, .col-4
+        width: 100%
+    /*------------- Nav ------------------*/
+    .banner
+        margin: 0 
+        .overlay
+            .wrapper
+                h1
+                    font-size: 1.5em
+    nav      
+        ul
+            padding-right: 10px
+            li
+                padding: .3em
+                a
+                    font-size: 14px
+    section
+        .wrapper            
+            .card
+                padding: 2%
+                .card-inner
+                    h4
+                        font-size: .8em
+                    h5
+                        font-size: .5em
+    /*------------- Advantages ------------------*/
+    .app-advantages      
+        .col          
+            .col-inner
+                p
+                    font-size: .6em
+                .key-feature
+                    width: 40px
+                    height: 40px
+                .icon-inner
+                    font-size: 25px
+                .icon-shipping
+                    top: 8px
+                    left: 5px
+                .icon-cog
+                    top: 8px
+                    left: 8px
+                .icon-hourglass
+                    top: 8px
+                    left: 11px
+                .icon-cloud
+                    top: 7px
+                    left: 5px
+    /*------------- feature ------------------*/
+    .feature
+        .col-1, .col-2
+            width: 100%
+            img
+                width: 25%
+        .feature-icon
+            font-size: 2em
+    /*------------- video ------------------*/
+    .works, .download-app
+        .apple-store
+            width: 90px
+        .google-play
+            width: 100px
+    .works
+        .how-it-works
+            padding: 10px
+            .get-app
+                margin: 0
+                h3
+                    margin: 5px 0
+    /*------------- Pricing ------------------*/
+    .pricing-plans
+        .info-card
+            padding: 10px
+        ul
+            li
+                width: 100%
+                margin: 10px 0
+    /*------------- footer ------------------*/
+    footer
+        .col-1
+            text-align: center
+            padding: 10px
+        .col-2
+            ul
+                li
+                    margin: 0
+                    a
+                        font-size: .5em
+        .col-3
+            .subscribe-bar
+                width: 100%    
